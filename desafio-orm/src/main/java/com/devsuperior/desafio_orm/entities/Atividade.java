@@ -25,11 +25,12 @@ public class Atividade {
 
     @ManyToMany
     @JoinTable(name = "tb_atividade_participante",
-            joinColumns = @JoinColumn(name = "participante_id"),
-            inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+            joinColumns = @JoinColumn(name = "atividade_id"),
+            inverseJoinColumns = @JoinColumn(name = "participante_id"))
     private Set<Participante> participantes = new HashSet<>();
 
-    @OneToMany(mappedBy = "atividade")
+    @OneToMany
+    @JoinColumn(name = "bloco_id")
     private Set<Bloco> blocos = new HashSet<>();
 
     public Atividade() {
