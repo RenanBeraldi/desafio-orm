@@ -29,7 +29,7 @@ public class Atividade {
             inverseJoinColumns = @JoinColumn(name = "categoria_id"))
     private Set<Participante> participantes = new HashSet<>();
 
-    @OneToMany(mappedBy = "bloco_id")
+    @OneToMany(mappedBy = "atividade")
     private Set<Bloco> blocos = new HashSet<>();
 
     public Atividade() {

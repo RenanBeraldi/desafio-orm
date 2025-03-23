@@ -17,8 +17,8 @@ public class Bloco {
     private Instant fim;
 
     @ManyToOne
-    @JoinColumn(name = "bloco_id")
-    private Bloco bloco;
+    @JoinColumn(name = "atividade_id")
+    private Atividade atividade;
 
     public Integer getId() {
         return id;
