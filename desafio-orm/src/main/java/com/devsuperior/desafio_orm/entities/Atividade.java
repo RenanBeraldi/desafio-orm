@@ -29,6 +29,9 @@ public class Atividade {
             inverseJoinColumns = @JoinColumn(name = "categoria_id"))
     private Set<Participante> participantes = new HashSet<>();
 
+    @OneToMany(mappedBy = "bloco_id")
+    private Set<Bloco> blocos = new HashSet<>();
+
     public Atividade() {
     }
 
