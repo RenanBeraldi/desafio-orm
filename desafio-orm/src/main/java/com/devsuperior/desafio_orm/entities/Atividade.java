@@ -17,6 +17,10 @@ public class Atividade {
 
     private Double preco;
 
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
+
     public Atividade() {
     }
 

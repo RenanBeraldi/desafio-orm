@@ -2,7 +2,9 @@ package com.devsuperior.desafio_orm.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_categoria")
@@ -13,6 +15,9 @@ public class Categoria {
     private Integer id;
 
     private String descricao;
+
+    @OneToMany(mappedBy = "atividade_id")
+    private Set<Atividade> atividades = new HashSet<>();
 
     public Categoria() {
     }
